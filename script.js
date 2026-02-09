@@ -504,7 +504,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     try {
                         const formData = new FormData(contactForm);
-                        const response = await fetch('https://api.web3forms.com/submit', {
+                        const response = await // API key intentionally removed for security (env-based in production)
+ {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -550,7 +551,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // ===========================
             // 12. TESTIMONIALS
             // ===========================
-            const SHEET_ID = "1hS1bpkkHudaaXqjqv8TuxTjIdRr3uvrfNP9sBFK1lkM";
+            const SHEET_ID = "PUBLIC_SHEET_ID";
             const SHEET_NAME = "Form responses 1";
             const SHEET_URL = `https://opensheet.elk.sh/${SHEET_ID}/${SHEET_NAME}`;
 

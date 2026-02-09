@@ -1,0 +1,779 @@
+<html lang="en">
+
+<head>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "GigNova",
+            "image": "https://gignova.netlify.app/assets/logo.png",
+            "@id": "",
+            "url": "https://gignova.netlify.app",
+            "telephone": "+918851632678",
+            "priceRange": "₹₹",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "New Delhi, India",
+                "addressLocality": "New Delhi",
+                "postalCode": "110001",
+                "addressCountry": "IN"
+            },
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                ],
+                "opens": "09:00",
+                "closes": "21:00"
+            }
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GigNova - Professional Web Design, Branding & Digital Marketing Services. Premium websites, logos, and digital growth solutions at affordable prices.">
+    <meta name="keywords" content="web design, logo design, branding, digital marketing, website development, freelance designer, GigNova">
+    <meta name="author" content="Divyanshu Kumar">
+    <meta name="theme-color" content="#3B82F6">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="GigNova | Digital Reality">
+    <meta property="og:description" content="Transform your brand with futuristic design and digital marketing">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gignova.netlify.app/assets/logo.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GigNova | Digital Reality">
+    <meta name="twitter:description" content="Transform your brand with futuristic design and digital marketing">
+
+    <title>GigNova | Digital Reality - Web Design & Branding Services</title>
+
+    <!-- Fonts - Preload for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#080C14',
+                        primary: '#3B82F6',
+                        accent: '#06B6D4',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="antialiased">
+
+    <!-- Custom Cursor - Desktop Only -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Loader - Simplified -->
+    <div class="loader" id="loader">
+        <div class="flex items-center gap-2">
+            <div class="w-3 h-3 bg-primary rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+            <div class="w-3 h-3 bg-accent rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+            <div class="w-3 h-3 bg-white rounded-full animate-bounce" style="animation-delay: 0.3s"></div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-[100] transition-all duration-300 py-6" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#home" class="flex items-center">
+                <img src="assets/logo.png" class="h-14 md:h-20" alt="GigNova Logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-2xl font-bold text-gradient\'>GigNova</span>'">
+            </a>
+
+            <div class="hidden md:flex space-x-10 text-sm font-semibold text-gray-300">
+                <a href="#home" class="hover:text-white transition">Home</a>
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#services" class="hover:text-white transition">Services</a>
+                <a href="portfolio.html" class="hover:text-white transition">Portfolio</a>
+                <a href="#process" class="hover:text-white transition">Process</a>
+            </div>
+
+            <a href="#contact" class="hidden md:block px-8 py-3 bg-primary rounded-full hover:bg-blue-600 transition font-semibold">
+                Let's Talk
+            </a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden fixed top-6 right-6 z-[101] w-12 h-12 flex items-center justify-center bg-primary/10 backdrop-blur-xl rounded-full border border-white/10">
+        <i class="fas fa-bars text-white text-xl menu-open"></i>
+        <i class="fas fa-times text-white text-xl menu-close hidden"></i>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#home" class="mobile-link text-3xl font-bold">Home</a>
+            <a href="#about" class="mobile-link text-3xl font-bold">About</a>
+            <a href="#services" class="mobile-link text-3xl font-bold">Services</a>
+            <a href="portfolio.html" class="mobile-link text-3xl font-bold">Portfolio</a>
+            <a href="#process" class="mobile-link text-3xl font-bold">Process</a>
+            <a href="#contact" class="mobile-link px-10 py-4 bg-primary rounded-full text-xl font-bold">Let's Talk</a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION - FIXED FOR MOBILE DESKTOP MODE -->
+    <header id="home" class="hero relative flex items-start pt-32 md:pt-48 overflow-hidden">
+        <canvas id="hero-particles"></canvas>
+        <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-dark pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full grid md:grid-cols-2 gap-12 items-start">
+            <div class="hero-content pt-10 md:pt-0">
+                <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full mb-8 bg-accent/10 border border-accent/40 backdrop-blur-xl">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
+                    </span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-accent">Accepting New Projects</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[1.1] mb-8 tracking-tight">
+                    We Craft <br>
+                    <span class="text-gradient">Digital Reality</span>
+                </h1>
+
+                <p class="text-gray-400 text-lg md:text-xl max-w-lg mb-12 leading-relaxed">
+                    Transforming brands with futuristic design, high-performance strategy, and seamless automation.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="#contact" class="btn-primary group">
+                        Start Project <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_gignova_?igsh=MWJmbzllYXY5Z3Z5Mw==" target="_blank" class="btn-secondary">
+                        <i class="fab fa-instagram text-xl"></i> Follow Work
+                    </a>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="flex flex-wrap gap-6 mt-12 pt-8 border-t border-white/10">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-shield-alt text-accent text-xl"></i>
+                        <span class="text-sm text-gray-400">100% Satisfaction</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-clock text-accent text-xl"></i>
+                        <span class="text-sm text-gray-400">Quick Delivery</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-headset text-accent text-xl"></i>
+                        <span class="text-sm text-gray-400">24/7 Support</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative hidden md:block hero-visual">
+                <div class="glow-effect"></div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Modern Dashboard" class="rounded-3xl shadow-2xl border border-white/10 relative z-10 hover:scale-[1.02] transition duration-500 glass-panel" loading="lazy">
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <div class="glass-panel border-x-0 relative z-20">
+        <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <h3 class="text-4xl md:text-5xl font-extrabold text-gradient mb-2 counter" data-target="15">0</h3>
+                <p class="text-xs md:text-sm text-gray-400 font-bold uppercase tracking-widest">Projects Done</p>
+            </div>
+            <div class="text-center">
+                <h3 class="text-4xl md:text-5xl font-extrabold text-gradient mb-2">1+</h3>
+                <p class="text-xs md:text-sm text-gray-400 font-bold uppercase tracking-widest">Year Experience</p>
+            </div>
+            <div class="text-center">
+                <h3 class="text-4xl md:text-5xl font-extrabold text-gradient mb-2 counter" data-target="100">0</h3>
+                <p class="text-xs md:text-sm text-gray-400 font-bold uppercase tracking-widest">% Satisfaction</p>
+            </div>
+            <div class="text-center">
+                <h3 class="text-4xl md:text-5xl font-extrabold text-gradient mb-2">24/7</h3>
+                <p class="text-xs md:text-sm text-gray-400 font-bold uppercase tracking-widest">Support</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20 md:py-32 relative">
+        <div class="glow-accent"></div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <span class="text-accent font-bold tracking-widest uppercase mb-4 block">Our Expertise</span>
+                <h2 class="text-4xl md:text-6xl font-bold">
+                    Services & <span class="text-gradient">Pricing</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card glass-panel p-8 rounded-3xl group">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon bg-primary/20 text-primary">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6">Web Design & Development</h3>
+
+                    <div class="space-y-3">
+                        <div class="pricing-item">
+                            <span>Basic Static Website</span>
+                            <span>Starts from ₹3,000</span>
+                        </div>
+
+                        <div class="pricing-item">
+                            <span>Basic Dynamic Website</span>
+                            <span>Starts from ₹7,000</span>
+                        </div>
+
+                        <div class="pricing-item">
+                            <span>Premium Website</span>
+                            <span>Starts from ₹12,000</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-6 border-t border-white/10">
+                        <p class="text-xs text-gray-500 mb-3">
+                            ✓ Mobile Responsive ✓ Fast Loading ✓ Clean & Modern UI
+                        </p>
+
+                        <p class="text-xs text-gray-500 mb-3">
+                            ✓ SEO-friendly structure ✓ Secure & Scalable Code
+                        </p>
+
+                        <p class="text-xs text-gray-500 mb-3">
+                            ✓ Pricing may vary based on features, pages & integrations
+                        </p>
+
+                        <a href="#contact" class="service-link text-primary">
+        Order Now <i class="fas fa-arrow-right ml-1"></i>
+    </a>
+                    </div>
+
+                </div>
+
+                <!-- Service 2 - Popular -->
+                <div class="service-card glass-panel p-8 rounded-3xl group md:-mt-8 relative">
+                    <span class="popular-badge">POPULAR</span>
+                    <div class="service-overlay bg-accent/10"></div>
+
+                    <div class="service-icon bg-accent/20 text-accent">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-6">Branding & Logo</h3>
+
+                    <div class="space-y-3">
+                        <div class="pricing-item">
+                            <span>Basic Logo Design</span>
+                            <span>Starts from ₹1,500</span>
+                        </div>
+
+                        <div class="pricing-item">
+                            <span>Standard Branding</span>
+                            <span>Starts from ₹3,000</span>
+                        </div>
+
+                        <div class="pricing-item">
+                            <span>Premium Brand Identity</span>
+                            <span>Starts from ₹6,000</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-6 border-t border-white/10">
+                        <p class="text-xs text-gray-500 mb-3">
+                            ✓ 100% Unique Design ✓ All Source Files ✓ Multiple Revisions
+                        </p>
+
+                        <p class="text-xs text-gray-500 mb-3">
+                            ✓ Pricing depends on concepts, revisions & brand requirements
+                        </p>
+
+                        <a href="#contact" class="service-link text-accent">
+            Order Now <i class="fas fa-arrow-right ml-1"></i>
+        </a>
+                    </div>
+                </div>
+
+
+                <!-- Service 3 -->
+                <div class="service-card glass-panel p-8 rounded-3xl group">
+                    <div class="service-overlay bg-purple-500/10"></div>
+
+                    <div class="service-icon bg-purple-500/20 text-purple-400">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-6">Digital Growth</h3>
+
+                    <div class="space-y-3">
+                        <div class="pricing-item">
+                            <span>Ads Setup (Google / Meta)</span>
+                            <span>Starts from ₹2,000</span>
+                        </div>
+
+                        <div class="pricing-item">
+                            <span>Social Media Post (Per Post)</span>
+                            <span>Starts from ₹500</span>
+                        </div>
+
+                        <div class="pricing-item">
+                            <span>Video Ads / Reels</span>
+                            <span>Starts from ₹3,500</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-6 border-t border-white/10">
+                        <p class="text-xs text-gray-500 mb-3">
+                            ✓ Targeted Audience ✓ Analytics Tracking ✓ ROI-Focused Strategy
+                        </p>
+
+                        <p class="text-xs text-gray-500 mb-3">
+                            ✓ Ad budget is not included in service pricing
+                        </p>
+
+                        <a href="#contact" class="service-link text-purple-400">
+            Order Now <i class="fas fa-arrow-right ml-1"></i>
+        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA After Services -->
+            <div class="mt-16 text-center glass-panel p-8 md:p-12 rounded-3xl">
+                <h3 class="text-2xl md:text-4xl font-bold mb-4">Not Sure Which Package?</h3>
+                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Get a free consultation and we'll help you find the perfect solution.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="btn-primary">
+                        <i class="fas fa-calendar-check"></i> Book Free Call
+                    </a>
+                    <a href="https://wa.me/918851632678?text=Hi!%20I%20need%20help%20choosing%20a%20package" target="_blank" class="btn-secondary">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO PREVIEW -->
+    <section class="py-20 md:py-32 relative overflow-hidden">
+        <div class="glow-primary"></div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-accent font-bold tracking-widest uppercase mb-4 block">Our Work</span>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">Featured <span class="text-gradient">Projects</span></h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Check out our latest work that helped brands stand out</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="portfolio-card glass-panel rounded-2xl overflow-hidden group">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" alt="E-commerce Platform" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold mb-1">E-commerce Platform</h3>
+                            <p class="text-sm text-gray-400">Web Design & Development</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card glass-panel rounded-2xl overflow-hidden group">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop" alt="Brand Identity" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold mb-1">Tech Startup Branding</h3>
+                            <p class="text-sm text-gray-400">Logo & Brand Identity</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card glass-panel rounded-2xl overflow-hidden group">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2074&auto=format&fit=crop" alt="Social Campaign" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold mb-1">Social Media Campaign</h3>
+                            <p class="text-sm text-gray-400">Digital Marketing & Ads</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="portfolio.html" class="btn-gradient">
+                    <i class="fas fa-folder-open"></i> View Full Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section id="process" class="py-20 md:py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-accent font-bold tracking-widest uppercase mb-4 block">How We Work</span>
+                <h2 class="text-4xl md:text-6xl font-bold">Our <span class="text-gradient">Process</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="process-step">
+                    <div class="process-number bg-primary/20 text-primary">1</div>
+                    <h3 class="text-xl font-bold mb-3">Discuss</h3>
+                    <p class="text-gray-400 text-sm">Share your vision and goals</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number bg-accent/20 text-accent">2</div>
+                    <h3 class="text-xl font-bold mb-3">Design</h3>
+                    <p class="text-gray-400 text-sm">Create stunning designs</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number bg-purple-500/20 text-purple-400">3</div>
+                    <h3 class="text-xl font-bold mb-3">Develop</h3>
+                    <p class="text-gray-400 text-sm">Build and perfect it</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number bg-green-500/20 text-green-400">4</div>
+                    <h3 class="text-xl font-bold mb-3">Deliver</h3>
+                    <p class="text-gray-400 text-sm">Launch with support</p>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="mt-16 glass-panel p-8 rounded-3xl text-center">
+                <h3 class="text-2xl font-bold mb-6">⚡ Quick Turnaround</h3>
+                <div class="flex flex-wrap justify-center gap-8 text-sm">
+                    <div>
+                        <p class="text-3xl font-bold text-primary mb-2">2-3</p>
+                        <p class="text-gray-400">Days for Logos</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-accent mb-2">5-7</p>
+                        <p class="text-gray-400">Days for Websites</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-purple-400 mb-2">24-48</p>
+                        <p class="text-gray-400">Hours for Ads</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-20 md:py-32 relative overflow-hidden">
+        <div class="glow-accent"></div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-accent font-bold tracking-widest uppercase mb-4 block">Testimonials</span>
+                <h2 class="text-4xl md:text-6xl font-bold">What Clients <span class="text-gradient">Say</span></h2>
+            </div>
+
+            <div id="testimonials" class="grid md:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-2xl text-center">
+                    <div class="animate-pulse">
+                        <div class="h-4 bg-gray-700 rounded w-3/4 mx-auto mb-4"></div>
+                        <div class="h-3 bg-gray-700 rounded w-full mb-2"></div>
+                        <div class="h-3 bg-gray-700 rounded w-5/6 mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-sm text-gray-500 mt-10">✔ Real reviews from satisfied clients</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 md:py-32 relative">
+        <div class="glow-primary"></div>
+
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-accent font-bold tracking-widest uppercase mb-4 block">Got Questions?</span>
+                <h2 class="text-4xl md:text-6xl font-bold">Frequently Asked <span class="text-gradient">Questions</span></h2>
+            </div>
+
+            <div class="space-y-6">
+                <div class="faq-item glass-panel rounded-2xl overflow-hidden">
+                    <button class="faq-question">
+                        <span>How long does it take to build a website?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            Basic websites take 5-7 days, advanced websites 7-10 days, premium animated websites 10-14 days. Rush delivery available on request.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-panel rounded-2xl overflow-hidden">
+                    <button class="faq-question">
+                        <span>Do you provide hosting and domain?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            Yes! We help with hosting and domain setup. Maintenance packages start from ₹500/month.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-panel rounded-2xl overflow-hidden">
+                    <button class="faq-question">
+                        <span>What if I need revisions?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            Unlimited revisions until 100% satisfaction. Minor changes are free even after delivery.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-panel rounded-2xl overflow-hidden">
+                    <button class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            UPI, bank transfer, and PayPal. 50% advance, 50% on completion.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-panel rounded-2xl overflow-hidden">
+                    <button class="faq-question">
+                        <span>Will my website be mobile-friendly?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-content">
+                            Absolutely! All websites are 100% mobile responsive on all devices.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-20 md:py-32 relative overflow-hidden">
+        <div class="cta-gradient"></div>
+        <div class="glow-center"></div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-8 leading-tight">
+                Ready to Take Your <br class="hidden md:block">
+                <span class="text-gradient">Business Online?</span>
+            </h2>
+            <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+                Join 15+ successful brands who trusted us. Let's build something amazing together.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#contact" class="btn-primary-large group">
+                    Start Your Project Now
+                    <i class="fas fa-rocket group-hover:translate-x-1 transition"></i>
+                </a>
+                <a href="https://wa.me/918851632678" target="_blank" class="btn-secondary-large">
+                    <i class="fab fa-whatsapp text-2xl"></i> WhatsApp Us
+                </a>
+            </div>
+
+            <div class="mt-16 pt-12 border-t border-white/10">
+                <div class="flex flex-wrap justify-center gap-8 text-sm text-gray-400">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-green-400"></i>
+                        <span>Money Back Guarantee</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-green-400"></i>
+                        <span>100% Satisfaction</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-green-400"></i>
+                        <span>Fast Delivery</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-green-400"></i>
+                        <span>24/7 Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 relative overflow-hidden">
+        <div class="glow-center"></div>
+
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <div class="about-avatar">
+                <div class="avatar-inner">
+                    <i class="fas fa-user-astronaut text-5xl text-gray-300"></i>
+                </div>
+            </div>
+
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-10">The Mind Behind <span class="text-gradient">GigNova</span></h2>
+
+            <div class="text-xl md:text-3xl leading-relaxed text-gray-300 font-light">
+                Hi, I'm <span class="text-white font-extrabold">Divyanshu Kumar</span>, currently pursuing B.Tech from Delhi University. Freelancing is my passion and part-time dedication. With <span class="text-accent font-bold">over a year of experience</span>                and <span class="text-accent font-bold">15+ delivered projects</span>, I guarantee exceptional results and satisfaction.
+            </div>
+
+            <div class="mt-16 pt-12 border-t border-white/10">
+                <p class="text-gray-400 mb-6 text-lg">We Accept</p>
+                <div class="flex justify-center gap-6 flex-wrap">
+                    <div class="payment-method">
+                        <i class="fas fa-credit-card text-primary"></i> UPI
+                    </div>
+                    <div class="payment-method">
+                        <i class="fas fa-university text-accent"></i> Bank Transfer
+                    </div>
+                    <div class="payment-method">
+                        <i class="fab fa-paypal text-blue-400"></i> PayPal
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="pt-20 pb-32 md:py-32 relative overflow-hidden">
+        <div class="glow-primary"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-accent font-bold tracking-widest uppercase mb-4 block">Get In Touch</span>
+                <h2 class="text-4xl md:text-7xl font-extrabold mb-8">
+                    Let's build a <br> <span class="text-gradient">Masterpiece.</span>
+                </h2>
+                <p class="text-gray-400 text-lg md:text-xl mb-12">
+                    Ready to dominate your market? Fill the form or reach out directly. We reply fast.
+                </p>
+
+                <div class="space-y-10">
+                    <a href="mailto:workwithdivyanshukumar@gmail.com" class="contact-link group">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="overflow-hidden">
+                            <p class="contact-label">Email Us</p>
+                            <p class="contact-value break-all">workwithdivyanshukumar@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <a href="tel:+918851632678" class="contact-link group">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="contact-label">Call Us</p>
+                            <p class="contact-value">+91 8851632678</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <form id="contact-form" class="contact-form">
+                <input type="hidden" name="access_key" value="28117c07-85d7-488e-b449-6cb0076855a5">
+                <input type="hidden" name="subject" value="New Lead from GigNova Website">
+                <input type="text" name="_honeypot" style="display:none">
+
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label>Your Email</label>
+                    <input type="email" name="email" required placeholder="john@company.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" required pattern="[0-9]{10}" placeholder="+91 98765 43210">
+                </div>
+
+                <div class="form-group">
+                    <label>Project Details</label>
+                    <textarea name="message" required placeholder="Tell us about your goals..." rows="5"></textarea>
+                </div>
+
+                <button type="submit" id="form-submit-btn" class="btn-submit">
+                    Send Message
+                </button>
+
+                <div id="result" class="form-result"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 py-16 bg-dark relative z-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <img src="assets/logo.png" alt="GigNova Logo" class="h-16 md:h-20 opacity-70 hover:opacity-100 transition mb-4" onerror="this.style.display='none'; this.parentElement.innerHTML='<p class=\'text-2xl font-bold text-gradient mb-4\'>GigNova</p>'">
+                <p class="text-gray-500 text-sm font-medium">© 2026 GigNova Digital. All Rights Reserved.</p>
+            </div>
+
+            <div class="flex gap-8">
+                <a href="https://www.instagram.com/_gignova_?igsh=MWJmbzllYXY5Z3Z5Mw==" target="_blank" class="social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/divyanshu-kumar-7625a8315" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:workwithdivyanshukumar@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/918851632678" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript - Load Scripts Efficiently -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
